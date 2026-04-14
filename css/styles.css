@@ -4,13 +4,16 @@
     box-sizing: border-box;
 }
 
-
+html {
+    scroll-behavior: smooth;
+}
 
 body {
     background-color: #0F172A;
     font-family: "Poppins", sans-serif;
     color: #F8FAFC;
-    overflow-x: hidden;
+    padding-bottom: 4rem;
+   
     
 }
 
@@ -21,7 +24,7 @@ h1,h2,h3 {
 a {
   text-decoration: none;
   color: #F8FAFC;
-  font-size: 20px;
+  font-size: 16px;
 }
 
 ul {
@@ -62,12 +65,7 @@ header {
     text-decoration: underline;
 }
 
- header nav {
-    position: relative;
-    width: auto;
-    height: auto;
-    
-} 
+ 
 
 .mobile-nav-links {
     display: flex;
@@ -76,25 +74,29 @@ header {
     align-items: center; 
     position: absolute; 
     right: 0;
-    top: 120%;
+    top: 100%;
     padding: 0.5rem 0.5rem; 
     border-left: 1px solid whitesmoke ;
     border-bottom: 1px solid whitesmoke;
-    font-size: 8px;
-   
     background-color: #0F172A; 
-    /* display: none; */
+    display: none;
  }
 
 
-/* figcaption { 
+figcaption { 
     color: #F8FAFC;
     font-weight: 700;
 }
 .hero-project {
     background-color: #0F172A;
     padding: 1rem 1rem;
-   
+}
+
+.hero-project:hover {
+    background: goldenrod;
+    text-decoration: underline;
+
+
 }
 
 
@@ -104,7 +106,9 @@ header {
     display: flex;
     flex-direction: column;
     gap: 2rem;
-   
+    padding: 0 0.5rem;
+    
+    
     
 }
 
@@ -112,9 +116,18 @@ header {
   width: 100%;
   max-width: 300px;
   height: auto;
+ }
+
+ .hero figure {
+    padding: 0 4rem;
+ }
  
+figcaption {
+    opacity: 0.5;
+    display: flex;
+    justify-content: center;
 }
- */
+ 
 
 
 
