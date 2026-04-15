@@ -225,6 +225,10 @@ figcaption {
         display: none;
     }
 
+    .desktop-nav-links {
+        display:flex;
+    }
+
     body {
     background-color: #0F172A;
     font-family: "Poppins", sans-serif;
@@ -243,6 +247,14 @@ figcaption {
 
     .mobile {
         display: none;
+    }
+
+    .desktop-nav-links {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        gap: 2rem;
+        padding: 0 0.5rem;
     }
 }
 
