@@ -4,15 +4,14 @@
     box-sizing: border-box;
 }
 
-html {
-    scroll-behavior: smooth;
-}
+
 
 body {
     background-color: #0F172A;
     font-family: "Poppins", sans-serif;
     color: #F8FAFC; 
     padding-bottom: 10rem;
+    font-size: 20px;
    
     
 }
@@ -24,7 +23,7 @@ h1,h2,h3 {
 a {
   text-decoration: none;
   color: #F8FAFC;
-  font-size: 16px;
+   font-size: 16px;
 }
 
 ul {
@@ -206,6 +205,72 @@ figcaption {
 .skills-content div p {
     font-weight: 600;
 }
+
+/* project section */
+.project {
+    margin: 1rem 1rem;
+    
+}
+.project-container {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+}
+.project-container div {
+    border: 1px solid aliceblue;
+    padding: 0.5rem 0.5rem;
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem 0;
+    font-size: 20px;
+
+}
+
+.project-container div button {
+   background-color: #1E293B;
+   padding: 0.5rem 0;
+}
+.project-container div a {
+    font-size: 16px;
+    font-weight: 800;
+}
+.pji,.pj2,.pj3,.pj4:hover {
+    background-color: darkred;
+}
+.pj1 {
+   
+    background-image: url(../images/naya\ image\ 2.jpeg);
+    background-position: center;
+    background-size: cover;
+    font-weight: 700;
+}
+
+
+ .pj2 {
+  
+    background-image: url(../images/2150201871.jpg);
+    background-position: center;
+    background-size: cover;
+    font-weight: 700;
+}
+.pj3 {
+    
+    background-image: url(../images/download.jpg);
+    background-position: center;
+    background-size: cover;
+    font-weight: 700;
+}
+.pj4 {
+    
+    background-image: url(../images/Club\ Foot\ Treatment\ _\ Foot\ Disorders\ _\ Foot\ and\ Ankle\ Specialist\ India.jpg);
+    object-fit: contain;
+    background-size: cover;
+    background-repeat: no-repeat;
+    font-weight: 700;
+}
+   
+
+
 
 
 
