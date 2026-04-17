@@ -19,10 +19,10 @@ h1,h2,h3 {
 
     font-family: "Roboto", sans-serif;
 }
-a {
+ a {
   text-decoration: none;
   color: #F8FAFC;
-   font-size: 16px;
+  font-size: 16px;
 }
 
 ul {
@@ -63,8 +63,6 @@ header {
     text-decoration: underline;
 }
 
- 
-
 .mobile-nav-links {
     display: flex;
     flex-direction: column;
@@ -78,7 +76,7 @@ header {
     border-bottom: 1px solid whitesmoke;
     background-color: #0F172A; 
     display: none;
- }
+}
 
 /* SECTIONS */
 
@@ -87,16 +85,9 @@ figcaption {
     color: #F8FAFC;
     font-weight: 700;
 }
-.hero-project {
-    background-color: #0F172A;
-    padding: 1rem 1rem;
-    border-radius: 10px;
-}
 
-.hero-project:hover {
-    background:darkred;
-    text-decoration: underline;
-}
+
+
 
 .hero {
     margin: 1rem 0.5rem;
@@ -107,11 +98,35 @@ figcaption {
     background-color: #1E293B;
 }
 
+.hero-content {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 2rem;
+}
+
+.hero-content a {
+    background-color: #0F172A;
+    padding: 0.5rem 0.5rem;
+    font-size: 20px;
+    font-weight: 700;
+    border: 1px solid aliceblue;
+    border-radius: 10px;
+}
+
+.hero-content a:hover {
+    background-color: darkred;
+}
+
 .hero img {
   width: 100%;
-  max-width: 300px;
-  height: auto;
+  height: 100%;
+  border-radius: 50%;
   padding-top: 1rem;
+ }
+ .about-me-content img {
+    display: none;
  }
 
  .hero figure {
@@ -122,51 +137,59 @@ figcaption {
     opacity: 0.5;
     display: flex;
     justify-content: center;
+    white-space: nowrap;
 }
 
 /* about me */
 .about-me {
-   margin: 1rem 0.5rem;
+    margin: 0.5rem 0.5rem;
    background-color:#1E293B ;
    font-size: 20px ;
-   padding: 1rem 0.5rem;
 }
 
-.about-me-content {
+.text {
     display: flex;
     flex-direction: column;
-    gap: 2rem;
+    gap: 1.5rem;
+    padding: 0.5rem 1rem;
 }
-.about-me-content h2 {
+.text h2 {
+    margin-top: 0.5rem;
+    margin-bottom: 0.5rem;
     border: 1px solid aliceblue;
-    padding: 0.5rem 4rem;
-    white-space: nowrap;
+    padding: 0.5rem 1.5rem;
     border-radius: 10px;
     background-color: beige;
     color: red;
     transition: all 3s ease-in-out;
+    width:fit-content;
 
 }
-.about-me-content h2:hover {
+.text h2:hover {
     text-decoration: underline;
     transform: translateY(-1rem);
 }
-.about-me-content h3 {
+.text h3 {
+    margin-top: 0.5rem;
+    margin-bottom: 0.5rem;
     transition: all 3s ease-in-out;
     border: 1px solid aliceblue;
     border-radius: 10px;
-    padding: 0.5rem 1.5rem;
-    width: 60%;
-    
+    padding: 0.5rem 0.5rem;
+    width:fit-content;
 }
-.about-me-content h3:hover {
+.text h3:hover {
     transform: translateX(3rem);
 }
+
+
 
 /* skills section */
 
 .skills {
-   
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
     padding: 0.5rem 0.5rem;
     margin: 0.5rem 0.5rem;
 }
@@ -222,6 +245,11 @@ figcaption {
     flex-direction: column;
     gap: 0.5rem 0;
     font-size: 20px;
+}
+
+.project-container div:hover {
+    cursor: pointer;
+    background-color: darkred;
 
 }
 
@@ -233,9 +261,7 @@ figcaption {
     font-size: 16px;
     font-weight: 800;
 }
-.pji,.pj2,.pj3,.pj4:hover {
-    background-color: darkred;
-}
+
 .pj1 {
    
     background-image: url(../images/naya\ image\ 2.jpeg);
@@ -262,10 +288,11 @@ figcaption {
 .pj4 {
     
     background-image: url(../images/Club\ Foot\ Treatment\ _\ Foot\ Disorders\ _\ Foot\ and\ Ankle\ Specialist\ India.jpg);
-    object-fit: contain;
+    background-position: center;
     background-size: cover;
     background-repeat: no-repeat;
     font-weight: 700;
+    
 }
 
 .contact {
@@ -329,53 +356,77 @@ input:focus {
     gap: 1rem;
     border: 1px solid aliceblue;
     padding: 0.5rem 0.5rem;
-   
 }
 
 .follow1 {
     display: inline;
 }
+.follow div {
+    padding: 0 0.5rem;
+}
 
 .footer {
     margin: 4rem 0.5rem;
     background-color: #1E293B;
-    padding: 1rem 1rem;
+    padding: 2rem 1rem;
 }
 
 
 
-
-
-
-
-
-
-
-
-
- 
-
-
-
-
-
-@media (min-width:768px-1023px) {
+@media (min-width:768px) {
+    /* hero section */
     .mobile-nav-links {
         display: none;
     }
-
-   
     .mobile {
         display: none;
     }
-
+    .logo {
+        transition: all 0.3s ease;
+        display: inline-block;
+        border: 1px solid aliceblue;
+        border-radius: 10px;
+        padding: 1rem 1rem;
+    }
+    .logo:hover {
+        background-color: darkred;
+        color: aliceblue;
+        transform: scale(1.05);
+    }
+   
     .desktop-nav-links {
         display:flex;
+        justify-content: space-between;
+        gap: 1rem;
     }
 
+    .about-me-content img {
+        display: none;
+    }
+    
+    .desktop-nav-links a {
+        border: 1px solid aliceblue;
+        padding: 0.5rem 0.5rem;
+        border-radius: 10px;
+        font-weight: 800;
+        transition: all 0.3s ease;
+        display: inline-block;
+    }
+
+    .desktop-nav-links a:hover {
+        background-color:darkred;
+        transform: scale(1.05);
+    }
+    
     body {
     background-color: #0F172A;
     font-family: "Poppins", sans-serif;
+    }
+
+    .hero-project a {
+    font-size: 20px;
+    font-weight: 800;
+
     }
 }
 
@@ -398,8 +449,74 @@ input:focus {
         justify-content: space-between;
         align-items: center;
         gap: 2rem;
-        padding: 0 0.5rem;
     }
+    
+
+    .hero {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        gap: 2rem;
+    }
+
+  
+
+
+/* about me section */
+    
+  .about-me-content img {
+    display:block;
+    flex-direction: column;
+    padding: 0.5rem 0;
+    width: 400px;
+    height: 400px;
+    border-radius: 50%;
+    margin: 0 auto;
+
+    }
+    .about-me-content{
+    display: grid;
+    grid-template-columns:2fr 2fr;
+    gap: 2rem;
+    align-items: center;
+    }
+    
+    .skills-content {
+        display: grid;
+        grid-template-columns: repeat(3,1fr);
+        grid-template-rows: auto;
+        gap: 2rem;
+       
+    }
+    .skills-content div {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        gap: 2rem;
+    }
+    .skills-content div button {
+        align-self: center;
+       
+    }
+    .project-container{
+        display: grid;
+        grid-template-columns: repeat(2 1fr);
+        grid-template-rows: auto;
+    }
+
+      
+
+        
+
+
+
+        
+        
+
+
+    
+    
 }
 
 
