@@ -204,23 +204,28 @@ figcaption {
     border: 1px solid aliceblue;
     display: flex;
     flex-direction: column;
+    justify-content:space-between;
+    align-items: center;
     gap: 2rem;
     background-color: #1E293B;
-    padding: 0.5rem 0.5rem;
+    padding: 0.5rem 1rem;
     transition: all 0.5s ease-in-out;
+    height: 25rem;
+    width:100%;
 }
 
 .skills-content div:hover {
     background-color: darkred;
     transform: scale(1.1);
 }
-.skills-content div button {
+.skills-content div a {
     background-color: #0F172A;
     padding: 0.5rem 0.5rem;
     font-weight: 800;
+    align-self: center;
 }
 
-.skills-content div button:hover {
+.skills-content div a:hover {
     background-color:#1E293B;
 } 
 
@@ -231,35 +236,46 @@ figcaption {
 /* project section */
 .project {
     margin: 1rem 1rem;
-    
 }
+
 .project-container {
     display: flex;
     flex-direction: column;
     gap: 2rem;
+     margin: 1rem 0; 
 }
 .project-container div {
     border: 1px solid aliceblue;
-    padding: 0.5rem 0.5rem;
+    padding: 2rem 0.5rem;
     display: flex;
+    justify-content: space-between;
+    align-content: center;
     flex-direction: column;
-    gap: 0.5rem 0;
+    gap: 1rem;
     font-size: 20px;
+    height: 35rem;
+    width: 100%;
 }
 
-.project-container div:hover {
-    cursor: pointer;
-    background-color: darkred;
-
-}
-
-.project-container div button {
-   background-color: #1E293B;
-   padding: 0.5rem 0;
-}
-.project-container div a {
-    font-size: 16px;
+.pj1 a,
+.pj2 a,
+.pj3 a,
+.pj4 a
+    {
+    background-color: #0F172A;
+    align-self: center;
     font-weight: 800;
+    padding: 0.5rem 0.5rem;
+    transition: all 0.3s ease;
+    }
+
+.pj1 a:hover,
+.pj2 a:hover,
+.pj3 a:hover,
+.pj4 a:hover {
+    background-color: #1E293B;
+    transform: scale(1.05);
+    
 }
 
 .pj1 {
@@ -295,6 +311,7 @@ figcaption {
     
 }
 
+
 .contact {
     margin: 1rem 1rem;
     display:flex;
@@ -308,6 +325,8 @@ figcaption {
     display: flex;
     flex-direction: column;
     gap: 2rem;
+    background-color: #0F172A;
+    padding: 0.5rem 0.5rem;
   
 }
 
@@ -317,10 +336,25 @@ input {
     border-radius: 10px;
     color: aliceblue;
     font-size: 16px;
+    width: 100%;
 }
 input:focus {
     background-color: #0F172A;
     
+}
+
+label {
+    padding:0  0.5rem;
+}
+
+textarea {
+    width: 100%;
+    height: 10rem;
+}
+
+.contact-content button:hover {
+    background-color: #0F172A;
+    cursor: pointer;
 }
 
 .contact-content button {
@@ -358,9 +392,6 @@ input:focus {
     padding: 0.5rem 0.5rem;
 }
 
-.follow1 {
-    display: inline;
-}
 .follow div {
     padding: 0 0.5rem;
 }
@@ -428,6 +459,92 @@ input:focus {
     font-weight: 800;
 
     }
+
+   .project-container .pj1 {
+    height: 20rem;
+    width: fit-content;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    
+    
+   }
+
+   .project-container .pj1 h3 {
+    align-self: center;
+    font-size: 30px;
+   }
+   .project-container .pj2 {
+    height: 20rem;
+    width: fit-content;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+   }
+
+   .project-container .pj2 h3 {
+    align-self: center;
+    font-size: 30px;
+   }
+   .project-container .pj3 {
+    height: 20rem;
+    width: fit-content;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+   }
+
+   .project-container .pj3 h3 {
+    align-self: center;
+    font-size: 30px;
+   }
+   .project-container .pj4 {
+    height: 20rem;
+    width: fit-content;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+   }
+
+   .project-container .pj4 h3 {
+    align-self: center;
+    font-size: 30px;
+   }
+
+
+
+    .text h2 {
+        align-self: center;
+    }
+
+    .contact-content {
+        padding: 2rem 1rem;
+        display: flex;
+        gap: 3rem;
+        background-color: #0F172A;
+        
+    }
+
+    input {
+        width: 100%;
+        margin: 0.5rem 0;
+    }
+
+    label {
+        padding: 0 0.5rem;
+    }
+
+    textarea {
+        width: 100%;
+        height: 8rem;
+    }
+
+    .follow {
+        padding: 0.5rem 0.5rem;
+        display: flex;
+        flex-direction: row;
+        
+    }
 }
 
 @media (min-width:1024px) {
@@ -458,6 +575,7 @@ input:focus {
         align-items: center;
         gap: 2rem;
     }
+    
 
   
 
@@ -480,6 +598,14 @@ input:focus {
     gap: 2rem;
     align-items: center;
     }
+
+    .text h2 {
+    grid-column: 1 / -1;   /* span across all columns */
+  justify-self: center;  /* center horizontally */
+  align-self: start;  
+   
+       
+    }
     
     .skills-content {
         display: grid;
@@ -492,19 +618,118 @@ input:focus {
         display: flex;
         flex-direction: column;
         align-items: center;
-        justify-content: center;
-        gap: 2rem;
+        justify-content:space-between;
+        gap: 0.5rem;
+        height:30rem;
+        width: 100%;
     }
-    .skills-content div button {
-        align-self: center;
+    .skills-content div a {
+       align-self:center;
        
     }
-    .project-container{
-        display: grid;
-        grid-template-columns: repeat(2 1fr);
-        grid-template-rows: auto;
+    .project {
+        margin-bottom:1;
+    }
+    .project-container div {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        
     }
 
+    .project-container {
+        display: grid;
+        grid-template-columns: 2fr 2fr 2fr;
+        grid-template-rows: auto;
+        gap: 2rem;
+    }
+
+    .contact-content {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-row: auto;
+        padding: 2rem 1rem;
+        background-color: #0F172A;
+        gap:4rem;
+    }
+
+    .project-container .pj1 {
+    height: 30rem;
+    width: fit-content;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+   }
+
+   .project-container .pj1 h3 {
+    align-self: center;
+    font-size: 30px;
+   }
+   .project-container .pj2 {
+    height: 30rem;
+    width: fit-content;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+   }
+
+   .project-container .pj2 h3 {
+    align-self: center;
+    font-size: 30px;
+   }
+   .project-container .pj3 {
+    height: 30rem;
+    width: fit-content;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+   }
+
+   .project-container .pj3 h3 {
+    align-self: center;
+    font-size: 30px;
+   }
+   .project-container .pj4 {
+    height: 30rem;
+    width: fit-content;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+   }
+
+   .project-container .pj4 h3 {
+    align-self: center;
+    font-size: 30px;
+   }
+
+
+
+
+    input {
+        height: 3rem;
+        width: 70%;
+    }
+
+    textarea {
+        height: 10rem;
+        width: 80%;
+    }
+
+    .contact-content div button:hover{
+        background-color: #0F172A;
+        cursor: pointer;
+        
+    }
+
+   .follow {
+    display: flex;
+    flex-direction: row;
+    gap: 4rem;
+    padding: 1rem 0.5rem;
+   }
+   
+
+   
       
 
         
